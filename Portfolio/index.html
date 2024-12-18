@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            /* background-color: #181C14; */
+            background-color: black;
+        }
+
+        .header {
+            top: 0;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            /* position: fixed; */
+            background-color: #3C3D37;
+            display: block;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li a {
+            color: white;
+            float: left;
+            padding: 4px;
+            padding-left: 60px;
+            margin-top: 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .img {
+            border: 1px solid white;
+            border-radius: 50%;
+            margin-top: 170px;
+            margin-left: 250px;
+        }
+
+        .hello {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            opacity: 0.5;
+            margin-left: 800px;
+            margin-top: -290px;
+        }
+
+        .name {
+            color: white;
+            margin-left: 740px;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+        .frontend {
+            color: white;
+            margin-left: 680px;
+            margin-top: 9px;
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            opacity: 0.5;
+        }
+
+        .cv {
+            width: 130px;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: 700px;
+            border: black 2px solid;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .cv:hover {
+            background-color: #686D76;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 1px 0px 4px #373A40;
+        }
+
+        .contact {
+            width: 130px;
+            height: 50px;
+            background-color: #686D76;
+            color: white;
+            border: black 2px solid;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .contact:hover {
+            background-color: #222831;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 1px 0px 4px #373A40;
+        }
+
+        .linkedin {
+            margin-left: 780px;
+            margin-top: 10px;
+            /* object-fit: contain; */
+            /* mix-blend-mode: color-burn; */
+        }
+
+        .linkedin:hover {
+            border: 2px solid white;
+            border-radius: 50px;
+            box-shadow: antiquewhite 0px 0px 20px;
+        }
+
+        .github {
+            position: absolute;
+            margin-left: 20px;
+            margin-top: 9px;
+        }
+
+        .github:hover {
+            border: 2px solid white;
+            border-radius: 50px;
+            box-shadow: antiquewhite 0px 0px 20px;
+        }
+
+        .about {
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .img2 {
+            margin-top: 60px;
+            margin-left: 200px;
+            border: 1px solid black;
+            border-radius: 30px;
+            box-shadow: black 0px 7px 29px 0px;
+        }
+
+        .experience {
+            background-color: white;
+            height: 200px;
+            margin-left: 550px;
+            margin-right: 450px;
+            border: solid 2px black;
+            opacity: 0.7;
+            border-radius: 20px;
+            margin-top: -380px;
+        }
+
+        .fresher {
+            font-size: 40px;
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 65px;
+            font-weight: bold;
+        }
+
+        .educationdiv {
+            background-color: white;
+            height: 200px;
+            border: solid 2px black;
+            opacity: 0.7;
+            border-radius: 20px;
+            margin-left: 850px;
+            margin-right: 150px;
+            margin-top: -200px;
+        }
+
+        .education {
+            font-weight: 40px;
+            text-align: center;
+            font-size: 40px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .skills {
+            font-size: 70px;
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .development {
+            font-size: 40px;
+            color: white;
+            padding: 100px;
+            margin-left: 150px;
+            text-decoration: underline;
+        }
+
+        .html {
+            font-size: 20px;
+            color: white;
+            float: left;
+            word-spacing: 60px;
+            padding-left: 50px;
+        }
+
+        .ul {
+            margin-top: -65px;
+            margin-left: 170px;
+        }
+
+        .c {
+            font-size: 20px;
+            color: white;
+            float: left;
+            padding-left: 50px;
+            margin-top: -20px;
+        }
+
+        .ul2 {
+            margin-top: 60px;
+            margin-left: 210px;
+        }
+
+        .php {
+            font-size: 20px;
+            color: white;
+            float: left;
+            padding-left: 50px;
+        }
+
+        .ul3 {
+            margin-top: 80px;
+            margin-left: 140px;
+        }
+
+        .project {
+            height: 500px;
+            background-color: white;
+            border: solid 1px black;
+            background-color: white;
+        }
+
+        .contactme {
+            font-size: 50px;
+            color: white;
+            text-align: center;
+        }
+
+        .email {
+            border: 2px solid white;
+            height: 70px;
+            margin-top: 30px;
+            margin-left: 400px;
+            margin-right: 400px;
+            border-radius: 50px;
+        }
+
+        .email2 {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            margin-left: 40px;
+            position: absolute;
+            margin-top: 14px;
+        }
+
+        .email2:hover {
+            opacity: 0.5;
+            text-decoration: underline;
+            transition: 0.4s ease;
+        }
+
+        .soc {
+            padding-left: 20px;
+            position: relative;
+            margin-top: -150px;
+        }
+
+        @media screen and(max-width:1266){
+            
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+
+        <div class="header">
+            <div>
+
+            </div>
+            <div>
+                <ul>
+                    <li style="margin-left: 650px;"><a href="#home">Home</a></li>
+                    <li><a href="#aboutsec">About me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project1">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        
+        </div>
+
+        <section id="#home">
+            <div>
+                <img class="" src="Devendra.jpg" width="340px" height="350px" alt="">
+            </div>
+            <div>
+                <h3 class="hello">
+                    Hello, i'm
+                </h3>
+                <h1 class="name">
+                    Devendra Tinker
+                </h1>
+                <h2 class="frontend">
+                    Frontend Developer
+                </h2>
+            </div>
+            <div>
+                <a href="Devendra Tinker.pdf" target="_blank"> <input class="cv" type="button" name="button"
+                        value="Download CV"></a>
+                <a href="#contactme"> <input class="contact" type="button" name="contact" value="Contact"></a>
+                <div>
+                    <a href="https://www.linkedin.com/in/devendra-tinker-45032b247/" target="_blank"><img
+                            class="linkedin" src="linkedin.png" width="40px" alt=""></a>
+                    <a href="https://github.com/DevendraTinker" target="_blank"><img class="github" src="github.png"
+                            width="40px" alt=""></a>
+                </div>
+
+            </div>
+        </section>
+        <section id="aboutsec">
+            <div>
+                <h1 class="about">About Me</h1>
+                <div>
+                    <img class="img2" src="Devendra2.jpg.jpeg" width="300px" alt="">
+                    <div class="experience">
+                        <p class="fresher">Fresher</p>
+                    </div>
+
+                    <div class="educationdiv">
+                        <p class="education">Education</p>
+                        <p
+                            style="text-align: center; font-size: 20px; margin-top: 5px; font-family:Arial, Helvetica, sans-serif ;">
+                            BCA Bachelors <br> Degree
+                        <p
+                            style="text-align: center; font-size: 20px; margin-top: 8px; font-family:Arial, Helvetica, sans-serif ;">
+                            MCA Pursuing <br>
+                        </p>
+                    </div>
+                    <p
+                        style="color: white; margin-left: 550px; margin-right: 100px; font-size: 20px; margin-top: 10px;">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, accusamus accusantium debitis
+                        quis doloremque nam repudiandae tempore esse beatae rerum amet incidunt earum, minima, obcaecati
+                        nemo! Ipsum aut non vitae. <br> <br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum placeat in voluptatum
+                        perspiciatis fugiat provident, deleniti qui voluptatibus.
+                    </p>
+                </div>
+        </section>
+        <div>
+            <section id="skills">
+                <p class="skills">Skills</p>
+                <img style="float: right; position: relative; margin-top: -20px;" src="computer.png" width="350px"
+                    alt="">
+                <p class="development">Development</p>
+                <ul class="ul">
+                    <li class="html"> HTML</li>
+                    <li class="html"> CSS</li>
+                    <li class="html"> JavaScript</li>
+                </ul>
+
+                <ul class="ul2">
+                    <li class="c"> C</li>
+                    <li class="c"> C++</li>
+                    <li class="c"> Java</li>
+                </ul>
+
+                <ul class="ul3">
+                    <li class="php"> PHP</li>
+                    <li class="php"> MySQL</li>
+                    <li class="php"> Servlet </li>
+                    <li class="php"> JSP</li>
+                </ul>
+        </div>
+        </section>
+        <section id="project1">
+            <div style="margin-top: 300px; text-align: center;">
+                <p style="font-size: 60px;
+                color: white;">Projects</p>
+                <div class="project">
+                    <!-- <p>hello</p> -->
+                </div>
+
+        </section>
+    </div>
+
+
+    <div>
+        <p class="contactme">Contact</p>
+        <div class="email">
+            <a class="email2" href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+                target="_blank">devendratinker06@gmail.com</a>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div style="height: 100px;">
+    </div>
+    <section id="contact">
+        <div>
+            <section id="contactme">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="e3d3bd5d-18d9-420a-b4e8-6d3e1785aa6e">
+
+                    <label style="color: white; font-size: 30px; margin-left: 100px; margin-top: 100px;"
+                        for="name">Name:</label>
+                    <input style="height:30px; width: 200px; border-radius: 10px;" type="name" name="name" required>
+                    <label style="color: white; font-size: 30px; margin-left: 30px;" for="number">Number:</label>
+                    <input style="height:30px; width: 200px; border-radius: 10px;" type="number" name="number" required>
+                    <div>
+                        <label style="color: white; font-size: 30px; margin-left: 100px;" for="email">Email:</label>
+                        <input style="height:30px; width: 200px; border-radius: 10px;" type="email" name="email"
+                            required>
+                        <label style="color: white; font-size: 30px; margin-left: 75px;" for="text">Text:</label>
+                        <input style="height:30px; width: 200px; border-radius: 10px;" type="text" name="text" required>
+                        <div>
+                            <input
+                                style="width: 180px; height: 40px; border-radius: 50px; margin-left: 190px; margin-top: 10px; cursor: pointer;"
+                                type="submit" value="submit" formtarget="_blank">
+                            <input
+                                style="width: 180px; height: 40px; border-radius: 50px; margin-left: 120px; margin-top: 10px; cursor: pointer;"
+                                type="reset" value="Cancel">
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <div>
+                <a href="https://github.com/DevendraTinker" target="_blank"><img style="margin-left: 780px;" class="soc"
+                        src="Github.png" width="70px" alt=""></a>
+                <a href="https://www.linkedin.com/in/devendra-tinker-45032b247/" target="_blank"><img class="soc"
+                        src="Linkedin.png" width="70px" alt=""></a>
+                <a href="#" target="_blank"><img class="soc" src="Whatsapp.png" width="70px" alt=""></a>
+                <a href="https://www.instagram.com/dvndr_06/?hl=en" target="_blank"><img class="soc" src="Instagram.png"
+                        width="70px" alt=""></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
